@@ -6,15 +6,19 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:e2e": "vue-cli-service test:e2e",
-    "lint": "vue-cli-service lint"
+    "test.url:e2e": "vue-cli-service test:e2e  --url http://qiniu.veryreader.com/D2CrudPlusExample/",
+    "test.headless:e2e": "vue-cli-service test:e2e --headless  --url http://qiniu.veryreader.com/D2CrudPlusExample/",
+    "test.dashboard:e2e": "vue-cli-service test:e2e --headless --record --key 97e8d38c-3824-4cff-ab0d-3d04cbe107c7  --url http://qiniu.veryreader.com/D2CrudPlusExample/",
+    "lint": "vue-cli-service lint",
+    "buildReport": "node tests/e2e/report/index.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11"
   },
   "devDependencies": {
+    "@d2-plus/vue-cli-plugin-e2e-cypress": "~4.5.3-2",
     "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-e2e-cypress": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "@vue/eslint-config-standard": "^5.1.2",
@@ -25,6 +29,11 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^6.2.2",
+    "fs-extra": "^9.0.1",
+    "mocha": "^8.1.1",
+    "mochawesome": "^6.1.1",
+    "mochawesome-merge": "^4.1.0",
+    "mochawesome-report-generator": "^5.1.0",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
